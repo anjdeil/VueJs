@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script src="vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+        <span>Сообщение: {{ msg }}</span>
+        <span v-once>Это сообщение никогда не изменится: {{ msg }}</span>
+        <p>Двойные фигурные скобки: {{ rawHtml }}</p>
+<p>Директива v-html: <span v-html="rawHtml"></span></p>
+<!-- Атрибуты -->
+<div v-bind:id="dynamicId"></div>
+<button v-bind:disabled="isButtonDisabled">Кнопка</button>
+<!-- Если значением isButtonDisabled будет null, undefined или false, то атрибут disabled не добавится в элемент <button>. -->
+
+        <!-- Использование выражений JavaScript -->
+        <a v-bind:href="url"> ... </a>
+        <a v-on:click="doSomething"> ... </a>
+        <!-- Динамические аргументы -->
+        <a v-bind:[attributeName]="url"> ... </a>
+        <a v-on:[eventName]="doSomething"> ... </a>
+        <!-- Когда значение eventName будет "focus", то обработчик v-on:[eventName] будет эквивалентен v-on:focus. -->
+
+        <!-- полный синтаксис -->
+<a v-bind:href="url"> ... </a>
+
+<!-- сокращённая запись -->
+<a :href="url"> ... </a>
+
+<!-- сокращённая запись с динамическим именем аргумента (2.6.0+) -->
+<a :[key]="url"> ... </a>
+
+<!-- полный синтаксис -->
+<a v-on:click="doSomething"> ... </a>
+
+<!-- сокращённая запись -->
+<a @click="doSomething"> ... </a>
+
+<!-- сокращённая запись с динамическим именем события (2.6.0+) -->
+<a @[event]="doSomething"> ... </a>
+
+    </body>
+    </html>
