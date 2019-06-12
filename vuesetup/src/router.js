@@ -6,14 +6,14 @@ Vue.use(Router)
 import home from './containers/home'
 import dashboard from './containers/dashboard'
 import projects from './containers/projects'
-import Resource from 'vue-resource'
-Vue.use(Resource)
+
 // application routes
 const routes = [
   { path: '/', component: home },
   { path: '/dashboard', component: dashboard },
   { path: '/projects', component: projects }
 ]
+
 // export router instance
 export default new Router({
   mode: 'history',

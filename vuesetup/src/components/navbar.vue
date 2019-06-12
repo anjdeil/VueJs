@@ -18,8 +18,12 @@
     </div>
   </nav>
 </template>
+
 <script>
 export default {
   name: 'navbar'
 }
 </script>
+
+<style lang="css">
+</style>
