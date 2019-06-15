@@ -4,7 +4,7 @@
 import Vue from 'vue'
 import navbar from './components/navbar'
 import router from './router'
-
+import store from './store'
 /* eslint-disable no-new */
 new Vue({
   template: `
@@ -18,6 +18,7 @@ new Vue({
   </div>
   `,
   router,
+  store,
   components: {
     navbar
   }
